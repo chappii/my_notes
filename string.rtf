@@ -1,0 +1,123 @@
+{\rtf1\ansi\ansicpg936\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset134 PingFangSC-Regular;
+\f3\fnil\fcharset134 PingFangSC-Semibold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh21000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\sl336\slmult1\pardirnatural\partightenfactor0
+
+\f0\b\fs30 \cf0 \uc0\u22522 \u26412 \u27010 \u24565 \u65306 
+\f1\b0 \
+string
+\f2 \'bf\'c9\'d2\'d4\'ce\'aa\'bf\'d5\'a3\'ac\'b5\'ab\'b2\'bb\'c4\'dc\'ca\'c7nil\
+string\'c4\'da\'b2\'bf\'bd\'e1\'b9\'b9\'b0\'fc\'c0\'a8\'d2\'bb\'b8\'f6\'d6\'b8\'cf\'f2\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'d6\'b8\'d5\'eb\'a3\'a8data\'a3\'a9\'a1\'a2\'d2\'bb\'b8\'f6\'b1\'ed\'ca\'be\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'a4\'b6\'c8\'b5\'c4len\
+string\'ca\'c7immutable\'b5\'c4\
+\'b7\'b4\'b5\'a5\'d2\'fd\'ba\'c5\'b4\'fa\'b1\'ed\'d4\'ad\'d1\'f9\'b1\'a3\'b4\'e6\'d7\'d6\'b7\'fb\'b4\'ae\
+S := `aaa\
+bbb`\
+\'b5\'c8\'cd\'ac\'d3\'da\
+S := \'a1\'b0aaa\\nbbb\'a1\'b1\
+\
+
+\f3\b \'b3\'a4\'b6\'c8
+\f2\b0 \
+String\'b5\'c4\'b3\'a4\'b6\'c8\'ce\'aautf8\'d7\'d6\'bd\'da\'ca\'fd\'a3\'ac\'b6\'f8\'b7\'c7\'d7\'d6\'b7\'fb\'ca\'fd\'a3\'ac\'c3\'bf\'b8\'f6\'d6\'d0\'ce\'c4\'d7\'d6\'b7\'fb\'d5\'bc\'d3\'c33\'d7\'d6\'bd\'da\'a3\'ac\'d2\'f2\'b4\'cb\'cf\'c2\'c3\'e6\'ca\'e4\'b3\'f6\'ce\'bb6\
+S := \'a1\'b0\'b9\'fe\'b9\'fe\'a1\'b1\
+println(len(s)) // 6\
+\
+
+\f3\b \'cf\'c2\'b1\'ea\'b2\'d9\'d7\'f7\
+
+\f2\b0 s := "\'b5\'da\'d2\'bb\'cc\'ec"\
+fmt.Printf("len = %d, s[%d] = %v\'a3\'ac type s[%d] = %T\\n", len(s), 0, s[0], 0, s[0])\
+fmt.Printf("%v, %v, %v\\n", s[0:3], s[3:6], s[6:])\
+\'ca\'e4\'b3\'f6\'a3\'ba\
+len = 9, s[0] = 231\'a3\'ac type s[0] = uint8\
+\'b5\'da, \'d2\'bb, \'cc\'ec\
+\
+s[i]\'bb\'f1\'c8\'a1\'b5\'c4\'ca\'c7\'d7\'d6\'b7\'fb\'b4\'ae\'d6\'d0\'cf\'c2\'b1\'ea\'ce\'aai\'b5\'c4\'d7\'d6\'bd\'da\'d4\'aa\'cb\'d8\'a3\'ac\'d2\'f2\'b4\'cb\'a3\'ac\'b6\'d4\'d3\'da\'b6\'e0\'d7\'d6\'bd\'da\'b5\'c4\'ba\'ba\'d7\'d6\'d7\'d6\'b7\'fb\'a3\'ac\'b5\'c3\'b5\'bd\'b5\'c4\'b2\'a2\'b2\'bb\'ca\'c7\'d2\'bb\'b8\'f6\'ba\'ba\'d7\'d6\
+\'d2\'bb\'b8\'f6\'ba\'ba\'d7\'d6\'d4\'dautf8\'b1\'e0\'c2\'eb\'cf\'c2\'d5\'bc\'d3\'c33-4\'d7\'d6\'bd\'da\'a3\'ac\'d2\'f2\'b4\'cb\'d0\'e8\'d2\'aa\'d2\'bb\'b4\'ce\'bb\'f1\'c8\'a13\'d7\'d6\'bd\'da\'b2\'c5\'c4\'dc\'b5\'c3\'b5\'bd\'cd\'ea\'b3\'c9\'b5\'c4\'ba\'ba\'d7\'d6\
+\
+
+\f3\b range
+\f2\b0 \
+for .. range\'d1\'ad\'bb\'b7\'d7\'d4\'b6\'af\'b4\'a6\'c0\'ed\'c1\'cb\'b6\'e0\'d7\'d6\'bd\'da\'d7\'d6\'b7\'fb\'a3\'ac\'d2\'f2\'b4\'cb\'bf\'c9\'d2\'d4\'ca\'e4\'b3\'f6\'c3\'bf\'b8\'f6\'ba\'ba\'d7\'d6\
+	for i := range s \{\
+		fmt.Printf("s[%d] = %c\\n", i, s[i])\
+	\}\
+	for i, v := range s \{\
+		fmt.Printf("s[%d] = %c\\n", i, v)\
+	\}\
+\'ca\'e4\'b3\'f6\'a3\'ba\
+s[0] = \uc0\u231 \
+s[3] = \uc0\u228 \
+s[6] = \uc0\u229 \
+s[0] = \'b5\'da\
+s[3] = \'d2\'bb\
+s[6] = \'cc\'ec\
+\
+
+\f3\b string\'ba\'cdrune
+\f2\b0 \
+\'d2\'bb\'b8\'f6utf8\'d7\'d6\'b7\'fb\'d5\'bc\'d3\'c31-4\'d7\'d6\'bd\'da\'a3\'ac\'d2\'f2\'b4\'cbrune\'c0\'e0\'d0\'cd\'d4\'dabuiltin\'d6\'d0\'b1\'bb\'b6\'a8\'d2\'e5\'ce\'aaint32\'b5\'c4\'b1\'f0\'c3\'fb\'a3\'ac\'d7\'a8\'c3\'c5\'d3\'c3\'c0\'b4\'b1\'ed\'ca\'be\'b6\'e0\'d7\'d6\'bd\'da\'d7\'d6\'b7\'fb\
+	r := []rune(s)\
+	fmt.Printf("len = %d, %c, %c, %c\\n", len(r), r[0], r[1], r[2])\
+\'ca\'e4\'b3\'f6\'a3\'balen = 3, \'b5\'da, \'d2\'bb, \'cc\'ec\
+\'bf\'c9\'d2\'d4\'bf\'b4\'b5\'bdstring\'b1\'bb\'d7\'aa\'bb\'bb\'ce\'aarune\'c7\'d0\'c6\'ac\'ba\'f3\'a3\'ac\'c7\'d0\'c6\'ac\'b3\'a4\'b6\'c8\'ce\'aa3\'a3\'ac\'d5\'fd\'ba\'c3\'ca\'c7\'d6\'d0\'ce\'c4\'d7\'d6\'b7\'fb\'ca\'fd\'a3\'ac\'c7\'d0\'c6\'ac\'d6\'d0\'c3\'bf\'b8\'f6\'d4\'aa\'cb\'d8\'b1\'ed\'ca\'be\'d2\'bb\'b8\'f6\'d6\'d0\'ce\'c4\'d7\'d6\'b7\'fb\
+\
+
+\f3\b string\'ba\'cd[]byte
+\f2\b0 \
+func main() \{\
+	s := "hello"\
+	b := []byte(s)\
+	fmt.Printf("b = %v\\n", b) // b = [104 101 108 108 111]\
+\
+	b = []byte\{'h', 'e', 'l', 'l', 'o'\}\
+	s = string(b)\
+	fmt.Printf("s = %v\\n", s) // s = hello\
+\}\
+\'d7\'a2\'d2\'e2\'d7\'aa\'bb\'bb\'bb\'e1\'b7\'a2\'c9\'fa\'bf\'bd\'b1\'b4\'a3\'ac\'b9\'fd\'b6\'e0\'ca\'b9\'d3\'c3\'bb\'e1\'d3\'b0\'cf\'ec\'d0\'d4\'c4\'dc\
+bytes\'b0\'fc\'d6\'d0\'b0\'fc\'ba\'ac\'c1\'cb\'cb\'f9\'d3\'d0string\'b3\'a3\'d3\'c3\'b2\'d9\'d7\'f7\'a3\'ac\'b0\'fc\'c0\'a8trim\'a1\'a2split\'a1\'a2contains\'a1\'a2index\'b5\'c8\'a3\'ac\'d2\'f2\'b4\'cb\'d3\'d0\'ca\'b1\'b2\'bb\'b1\'d8\'bd\'abbyte\'ca\'fd\'d7\'e9\'d7\'aa\'bb\'bb\'ce\'aastring\'be\'cd\'bf\'c9\'d2\'d4\'b4\'a6\'c0\'ed\'d7\'d6\'b7\'fb\'b4\'ae\'c4\'da\'c8\'dd\'a3\'ac\'bf\'c9\'d2\'d4\'bc\'f5\'c9\'d9\'bf\'bd\'b1\'b4\
+\
+
+\f3\b concatenation
+\f2\b0 \
+s := \'a1\'b0\'a1\'b1\
+for _, v := range values \{\
+	s += v\
+\}\
+\'bf\'c9\'d2\'d4\'d3\'c3\'a1\'b0+\'a1\'b1\'bd\'f8\'d0\'d0\'d7\'d6\'b7\'fb\'b4\'ae\'c1\'ac\'bd\'d3\'a3\'ac\'c9\'fa\'b3\'c9\'d0\'c2\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'b5\'ab\'ca\'c7\'d3\'c9\'d3\'da\'d7\'d6\'b7\'fb\'b4\'ae\'ca\'c7immutable\'b5\'c4\'a3\'ac\'d2\'f2\'b4\'cb\'c3\'bf\'b4\'ce\'d0\'de\'b8\'c4\'b6\'bc\'bb\'e1\'d6\'d8\'d0\'c2\'ce\'aas\'b7\'d6\'c5\'e4\'c4\'da\'b4\'e6\
+\'c0\'fd\'d7\'d3\'d6\'d0values\'ca\'c7\'ba\'dc\'b4\'f3\'b5\'c4string\'ca\'fd\'d7\'e9\'a3\'ac\'c3\'bf\'b4\'ce\'d1\'ad\'bb\'b7\'b6\'bc\'bb\'e1\'ce\'aas\'d6\'d8\'d0\'c2\'b7\'d6\'c5\'e4\'c4\'da\'b4\'e6\'a3\'ac\'d0\'d4\'c4\'dc\'ba\'dc\'b2\'ee\
+\'b8\'c4\'bd\'f8\'a3\'ba\
+sb := strings.Builder\{\}\
+sb.Grow(len(TOTAL_BYTES_OF_VAUES)) // \'d5\'e2\'b2\'bd\'b2\'bb\'ca\'c7\'b1\'d8\'d0\'eb\'b5\'c4\
+for _, v := range values \{\
+	sb.WriteString(v)\
+\}\
+s = sb.String()\
+\'c0\'fb\'d3\'c3strings.Builder\'cc\'e1\'c9\'fd\'d0\'d4\'c4\'dc\'a3\'ac\'d6\'bb\'d0\'e8\'d2\'aa\'ce\'aas\'b7\'d6\'c5\'e4\'d2\'bb\'b4\'ce\'c4\'da\'b4\'e6\
+Builder\'b5\'d7\'b2\'e3\'ca\'c7byte slice\'d6\'a7\'b3\'d6\'b5\'c4\'a3\'ac\'d2\'f2\'b4\'cb\'a3\'ac\'b8\'f9\'be\'dd\'c7\'d0\'c6\'ac\'b5\'c4\'d4\'ad\'c0\'ed\'a3\'ac\'bf\'c9\'d2\'d4\'ca\'c2\'cf\'c8\'cd\'a8\'b9\'fdGrow()\'ce\'aa\'c7\'d0\'c6\'ac\'b7\'d6\'c5\'e4\'d7\'e3\'b9\'bb\'b5\'c4\'bf\'d5\'bc\'e4\'a3\'ac\'b7\'c0\'d6\'b9append\'b9\'fd\'b3\'cc\'d6\'d0\'c0\'a9\'c8\'dd\'a1\'a2\'bf\'bd\'b1\'b4\
+\
+
+\f3\b memory leak
+\f2\b0 \
+\'b6\'d4string\'bd\'f8\'d0\'d0\'c7\'d0\'c6\'ac\'b2\'d9\'d7\'f7\'bf\'c9\'c4\'dc\'bb\'e1\'d4\'ec\'b3\'c9\'c4\'da\'b4\'e6\'d0\'b9\'c2\'b6\'a3\'ac\'c0\'fd\'c8\'e7s\'ca\'c7\'d2\'bb\'b8\'f6\'ba\'dc\'b4\'f3\'b5\'c4string\'a3\'ac\'ce\'d2\'c3\'c7\'d6\'bb\'d0\'e8\'d2\'aa\'c7\'b06\'b8\'f6\'d7\'d6\'bd\'da\'a3\'ba\
+s1 := s[:6]\
+\'d5\'e2\'d1\'f9\'b2\'d9\'d7\'f7\'ba\'f3\'a3\'acs\'b5\'c4\'b5\'d7\'b2\'e3data\'ca\'fd\'be\'dd\'b2\'bb\'bb\'e1\'b1\'bbgc\'ca\'cd\'b7\'c5\'a3\'ac\'d4\'ec\'b3\'c9\'c4\'da\'b4\'e6\'d0\'b9\'c2\'b6\
+\'bd\'e2\'be\'f61\'a3\'ba\
+s1 := string([]byte(s[:6]))\
+\'cf\'c8\'bd\'abs[:6]\'d7\'aa\'ce\'aabyte\'ca\'fd\'d7\'e9\'a3\'ac\'c8\'bb\'ba\'f3\'bd\'abbyte\'ca\'fd\'d7\'e9\'d7\'aa\'ce\'aastring\'a3\'ac\'d5\'e2\'d1\'f9\'cf\'e0\'b5\'b1\'d3\'da\'b6\'d4s\'b5\'c4\'c7\'b0\'c1\'f9\'b8\'f6\'d7\'d6\'bd\'da\'bd\'f8\'d0\'d0\'c1\'cb\'bf\'bd\'b1\'b4\'a3\'acbyte\'ba\'cds\'b6\'bc\'c3\'bb\'d3\'d0\'b1\'e4\'c1\'bf\'d6\'b8\'cf\'f2\'a3\'ac\'d2\'f2\'b4\'cb\'bb\'e1\'b1\'bbgc\'bb\'d8\'ca\'d5\
+\'bd\'e2\'be\'f62\'a3\'ba\
+s1 := strings.Clone(s[:6])\
+\'bd\'e8\'d6\'fastrings\'b0\'fc\'b5\'c4Clone\'ba\'af\'ca\'fd\'bd\'f8\'d0\'d0\'bf\'bd\'b1\'b4\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
